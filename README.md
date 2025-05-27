@@ -26,10 +26,9 @@ Datadog Flex Logsの料金を正確に計算するためのWebアプリケーシ
 
 #### URLパラメータ
 - `events`: 月間ログイベント数（百万単位）
-- `retention`: 保持期間（6または12）
 - `payment`: 支払いプラン（annualまたはmonthly）
 
-例: `https://example.com/?events=5&retention=12&payment=annual`
+例: `https://example.com/?events=5&payment=annual`
 
 ## 💰 料金体系
 
