@@ -96,6 +96,12 @@
             transform: translateY(-2px);
         }
 
+        .share-btn:hover {
+            background: #218838 !important;
+            transform: translateY(-1px);
+            transition: all 0.2s;
+        }
+
         .results {
             margin-top: 30px;
             padding: 30px;
@@ -227,6 +233,12 @@
                 </div>
 
                 <button class="calculate-btn" onclick="calculateCosts()">💰 料金を計算する</button>
+                
+                <div style="margin-top: 15px; display: flex; gap: 10px;">
+                    <button class="share-btn" onclick="generateShareURL()" style="background: #28a745; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; flex: 1; font-size: 14px;">
+                        🔗 共有URLをコピー
+                    </button>
+                </div>
             </div>
 
             <div class="results" id="results">
@@ -245,7 +257,11 @@
                 </div>
 
                 <div class="result-card">
-                    <h3>📊 月別料金推移</h3>
+                    <div id="chartContainer"></div>
+                </div>
+
+                <div class="result-card">
+                    <h3>📊 月別料金推移（24ヶ月）</h3>
                     <div id="monthlyBreakdown"></div>
                 </div>
 

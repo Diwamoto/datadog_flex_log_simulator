@@ -18,6 +18,19 @@ Datadog Flex Logsの料金を正確に計算するためのWebアプリケーシ
 4. 支払いプランを選択（年払いまたは月払い）
 5. 「料金を計算する」ボタンをクリック
 
+### 🔗 共有機能
+
+- **共有URLの生成**: 「共有URLをコピー」ボタンで設定をURLに保存
+- **自動読み込み**: 共有されたURLにアクセスすると設定が自動復元
+- **リアルタイム更新**: 設定変更時にURLが自動更新
+
+#### URLパラメータ
+- `events`: 月間ログイベント数（百万単位）
+- `retention`: 保持期間（6または12）
+- `payment`: 支払いプラン（annualまたはmonthly）
+
+例: `https://example.com/?events=5&retention=12&payment=annual`
+
 ## 💰 料金体系
 
 ### ストレージ料金（Storage）
