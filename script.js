@@ -414,25 +414,13 @@ function formatLogEvents(num, unit) {
 
 
 
-// ユーティリティ関数: 通貨フォーマット（大きな数値対応）
+// ユーティリティ関数: 通貨フォーマット（完全な数値表示）
 function formatCurrency(amount, currency = 'USD') {
     if (currency === 'USD') {
-        if (amount >= 1000000) {
-            return `$${(amount / 1000000).toFixed(2)}M`;
-        } else if (amount >= 1000) {
-            return `$${(amount / 1000).toFixed(1)}K`;
-        } else {
-            return `$${amount.toFixed(2)}`;
-        }
+        return `$${amount.toFixed(2)}`;
     } else if (currency === 'JPY') {
         const roundedAmount = Math.round(amount);
-        if (roundedAmount >= 100000000) {
-            return `¥${(roundedAmount / 100000000).toFixed(1)}億`;
-        } else if (roundedAmount >= 10000) {
-            return `¥${(roundedAmount / 10000).toFixed(1)}万`;
-        } else {
-            return `¥${roundedAmount.toLocaleString()}`;
-        }
+        return `¥${roundedAmount.toLocaleString()}`;
     }
     return amount.toString();
 }
